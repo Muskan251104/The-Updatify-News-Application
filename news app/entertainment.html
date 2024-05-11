@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <div class="name">
+            <h1>THE</h1>
+            <img src="icons8-real-time-news-50 (1).png" alt="">
+            <h1>UPDATIFY</h1>
+            <div class="btn">
+                <button>SUBSCRIBE</button>
+                <button>LOGIN</button>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="politics.html">Politics</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="entertainment.html">Entertainment</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+        <main id="articles-container4">
+            <!-- <p>this is world section</p>
+                <article>
+                    <img src="image.png" class="article-image">
+                    <div class="article-content">
+                        <h2>News Article Title 1</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, animi!</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="image.png" class="article-image">
+                    <div class="article-content">
+                        <h2>News Article Title 1</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, animi!</p>
+                    </div>
+                </article>
+                <article>
+            <img src="image.png" class="article-image">
+            <div class="article-content">
+                <h2>News Article Title 1</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, animi!</p>
+            </div>
+        </article> -->
+    </main>
+    
+
+    <footer>
+        &copy; 2024 The Updatify App.All rights copyrighted.
+    </footer>
+</body>
+<script>
+    const main = document.getElementById("articles-container4");
+// console.log(main);
+//main.innerHTML = "<h1>Hello from DOM</h1>"
+
+// const heading = 'Aaj kis taaza khabar';
+// const description = 'this is the latest news about india';
+// const link ="";
+
+let data;
+let dataLength = 0;
+async function getData()
+{
+    const res = await fetch("https://saurav.tech/NewsAPI/top-headlines/category/entertainment/in.json");
+    const result = await res.json();
+    data = result.articles;
+    dataLength = data.length;
+    renderUI();
+}
+getData();
+function renderUI(){
+for(let i=1;i<=dataLength;i++){
+const article = document.createElement('article');
+// console.log(article);
+article.innerHTML = `<img src="${data[i].urlToImage}" class="article-image">
+<div class="article-content">
+    <h2><a href="${data[i].url}" target="_blank">${data[i].title}</a></h2>
+    <p>${data[i].description}</p>
+    
+</div>`;
+main.appendChild(article);
+}}
+
+
+</script>
+
+</html>

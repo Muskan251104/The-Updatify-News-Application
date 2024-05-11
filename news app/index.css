@@ -1,0 +1,217 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:  sans-serif;
+}
+
+header{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    
+}
+#articles-container{
+    width: 70%;
+}
+
+.name{
+    display: flex;
+    margin: auto;
+    font-size: 26px;
+    font-family: "Merriweather", serif;
+    height: 120px;
+    padding-left: 250px;
+}
+.name img{
+    position: relative;
+    top: 24px;
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.main-container{
+    display: flex;
+}
+
+.btn{
+    position: relative;
+    top: 30px;
+    left: 250px;
+    
+}
+.btn button{
+    height: 40px;
+    width: 140px;
+    margin-right: 10px;
+    background-color:rgb(255, 200, 0);
+    font-size: 15px;
+    font-weight: bold;
+    background: linear-gradient(to left, rgb(255, 200, 0) 50%, rgb(255, 255, 255) 50%) right;
+    background-size: 200%;
+    transition: .3s ease-out;
+}
+
+.btn button:hover{
+    
+    background-position: left;
+   
+}
+
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    
+    margin: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    border-top: 5px solid white;
+    padding-right: 80px;
+    padding-top: 5px;
+    
+    
+}
+ nav ul li a:hover{
+    color: rgb(255, 200, 0);
+    border-top: 5px solid rgb(255, 200, 0);
+    transition: .5s;
+    border-radius: 5px;
+}
+    
+    
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+article{
+    display: flex;
+    /* flex-direction: column; */
+    background-color: #e5e7eb;
+    margin:20px 20px;
+}
+
+.article-image{
+    height: 120px;
+    width: 150px;
+    border-radius: 5%;
+    margin: 10px 20px;
+}
+
+.article-content{
+    display: flex;
+    flex-direction: column;
+}
+
+article a{
+    color: black;
+}
+
+.countries h2{
+    margin: 0;
+    padding: 5px 10px;
+    
+}
+.countries a{
+    color: black;
+    text-decoration: none;
+}
+.countries h2 img{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 6px;
+}
+
+.countries p{
+    margin: 0;
+    padding: 0 13px;
+    font-size: 18px;
+}
+
+.country-heading{
+    font-family: "Merriweather", serif;
+    background-color: black;
+    color: white;
+    height: 100px;
+    margin-top: 0;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.country-heading h1{
+    margin: 0;
+    
+}
+
+.countries ul li{
+    margin-bottom: 10px;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 19px;
+    text-decoration: underline;
+}
+.card{
+    height: 350px;
+    width: 400px;
+    background-color: black;
+    color: white;
+   
+   border-radius: 5%;
+   margin:10px 28px;
+
+}
+.card img{
+    height: 200px;
+    width: 350px;
+    
+    margin: 25px 25px;
+}
+.card-body{
+    padding: 0 25px;
+}
+
+#side-cards{
+    display: flex;
+    flex-direction: column;
+}
+#articles-container1{
+    width: 500px;
+    background-color: white;
+}
+.article-image1{
+    width: 400px;
+    margin: 20px 40px;
+    border-radius: 5%;
+}
+.article-content1{
+    margin: 0px 30px;
+    
+}
+.article-content1 a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+#sports{
+    margin-left: 10px;
+    margin-top: 50px;
+    margin-bottom: 0;
+    color: rgb(255, 200, 0);
+}

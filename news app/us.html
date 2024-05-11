@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United States</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="country-heading">
+        <h1>Trending news from United States</h1>
+    </div>
+    <main id="country-content">
+
+    </main>
+
+</body>
+<script>
+    const main = document.getElementById("country-content");
+
+    let data;
+    let dataLength = 0;
+    async function getData() {
+        const res = await fetch("https://saurav.tech/NewsAPI/top-headlines/category/general/us.json");
+        const result = await res.json();
+        data = result.articles;
+        dataLength = data.length;
+        renderUI();
+    }
+    getData();
+    function renderUI() {
+        for (let i = 1; i <= dataLength; i++) {
+            const article = document.createElement('article');
+            // console.log(article);
+            article.innerHTML = `<img src="${data[i].urlToImage}" class="article-image">
+<div class="article-content">
+    <h2><a href="${data[i].url}" target="_blank">${data[i].title}</a></h2>
+    <p>${data[i].description}</p>
+    
+</div>`;
+            main.appendChild(article);
+        }
+    }
+</script>
+
+</html>
